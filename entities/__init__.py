@@ -2,7 +2,6 @@
 
 import os
 import yaml
-from items import Item
 
 
 class Entity:
@@ -12,8 +11,7 @@ class Entity:
         self.pos = pos
         id = open(os.path.join(os.getcwd(), 'entities', id))
         self.stats = yaml.load(id)
-        if not item:
-            self.item = Item('bomb', game)
+        self.item = item
 
     def _move(self, x=0, y=0):
         self.pos[0] += x
@@ -32,4 +30,5 @@ class Entity:
         self._move(y=1)
 
     def use(self):
-        self.item.use(self)
+        if self.item:
+            self.item.use(self)
