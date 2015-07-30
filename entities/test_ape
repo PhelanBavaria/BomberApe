@@ -4,4 +4,4 @@ strength: 1
 max_uses: 1
 max_range: 1
 use_speed: 1
-on_death: 'die'
+on_death: none
