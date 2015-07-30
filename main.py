@@ -9,10 +9,11 @@ class Game:
         self.width = random.randint(25, 50)
         self.height = random.randint(25, 50)
         self.tiles = {}
-        for y in range(height):
-            for x in range(width):
-                tiles[(x, y)] = 'grass'
-        test_entity = Entity('test_ape')
+        for y in range(self.height):
+            for x in range(self.width):
+                self.tiles[(x, y)] = 'grass'
+        test_entity = Entity('test_ape', self, (0, 0))
+        test_entity.use()
 
 
 if __name__ == '__main__':
