@@ -1,0 +1,7 @@
+travel_speed: 0.2
+health: 1
+strength: 100
+max_uses: 1
+max_range: 10
+use_speed: 1
+on_death: 'detonate'

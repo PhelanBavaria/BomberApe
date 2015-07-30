@@ -2,6 +2,7 @@
 
 import random
 from entities import Entity
+from items import Item
 
 
 class Game:
@@ -12,7 +13,7 @@ class Game:
         for y in range(self.height):
             for x in range(self.width):
                 self.tiles[(x, y)] = 'grass'
-        test_entity = Entity('test_ape', self, (0, 0))
+        test_entity = Entity('test_ape', self, (0, 0), Item('bomb', self))
         test_entity.use()
 
 

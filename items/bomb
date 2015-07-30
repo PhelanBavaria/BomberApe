@@ -1,4 +1,4 @@
 range: 0
 strength: 0
-max_used: 10
+max_uses: 10
 on_use: 'place_bomb'
